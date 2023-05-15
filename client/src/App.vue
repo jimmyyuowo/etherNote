@@ -136,7 +136,7 @@ export default {
       .catch((error) => alert(error))
     },
     githubLink: function() {
-      window.open('https://github.com/Sefaice')
+      window.open('https://github.com/jimmyyuowo/etherNote')
     }
   }
 }

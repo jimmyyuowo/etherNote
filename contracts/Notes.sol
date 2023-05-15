@@ -46,6 +46,13 @@ contract Notes {
 	}
 	*/
 
+	/* disable for cannot add when register with web3
+	function findUserAddressByUsername(string _username) public constant returns (address) {
+		require (isExistUsername(_username));
+		return usernameMap[_username].userAddress;
+	}
+	*/
+
 	uint256 _unixTimestamp;
 	uint256 _timeExpired;
 	function isExistUsername(string memory _username) public view returns (bool) {
@@ -57,13 +64,6 @@ contract Notes {
 		}
 		return false;
 	}
-
-	/* disable for cannot add when register with web3
-	function findUserAddressByUsername(string _username) public constant returns (address) {
-		require (isExistUsername(_username));
-		return usernameMap[_username].userAddress;
-	}
-	*/
 
 	function createUser(string memory _username) public {
 		//require (!isExistUserAddress(_userAddress));

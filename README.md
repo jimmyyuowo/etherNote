@@ -2,11 +2,13 @@
 
 ## 架構：
 
-* 区块链：ethereum私链 + solidity + truffle部署
+* 區塊鏈：ethereum私鏈 ( geth ) + solidity + truffle部署
 
-* 后端：nodejs（express） + web3/truffle-contract调用私链上的合约
+* 後端：nodejs（express） + web3/truffle-contract調用區塊練上智能合約
 
 * 前端：基于vue框架的SPA
+
+* 其他工具: postman, chrome 瀏覽器
 
 ## 組件與部屬: 
 
