@@ -9,20 +9,20 @@
     <div class="app-main">
       <div class="userinfo">
         <div class="userinfo-usernum">
-          <span>目前总用户数: </span>
+          <span>目前總用户数: </span>
           <span>{{userCount}}</span>
         </div>
         <div class="userinfo-current">
-          <span>当前用户: </span>
+          <span>當前用户: </span>
           <span>{{currentUser}}</span>
         </div>
-        <button class="userinfo-signinbtn" @click="signinClick">切换用户</button>
-        <button class="userinfo-signupbtn" @click="signupClick">注册用户</button>
+        <button class="userinfo-signinbtn" @click="signinClick">切換用户</button>
+        <button class="userinfo-signupbtn" @click="signupClick">註冊用户</button>
       </div>
 
       <div class="note">
         <textarea class="note-content" spellcheck="false" v-model="note"></textarea>
-        <button class="note-getbtn" @click="getNoteClick">获取Note</button>
+        <button class="note-getbtn" @click="getNoteClick">獲取Note</button>
         <button class="note-setbtn" @click="setNoteClick">修改Note</button>
       </div>
     </div>
@@ -85,7 +85,7 @@ export default {
       })
       .then((response) => {
         if (response.data.label) {
-          alert('注册成功！')
+          alert('註冊成功！')
           this.currentUser = username
         } else {
           alert(response.data.msg)
@@ -95,7 +95,7 @@ export default {
     },
     getNoteClick: function() {
       if(this.currentUser == null || this.currentUser == ''){
-        alert('请先登录')
+        alert('請先登入')
         return
       }
       axios
@@ -111,7 +111,7 @@ export default {
     },
     setNoteClick: function() {
       if(this.currentUser == null || this.currentUser == ''){
-        alert('请先登录')
+        alert('請先登入')
         return
       }
       axios

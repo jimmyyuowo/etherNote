@@ -6,7 +6,7 @@ var url = 'http://127.0.0.1:10070'
 web3 = new Web3(new Web3.providers.HttpProvider(url))
 
 // 直接使用web3需要地址和abi
-var address = '0x3525399354C322AC3964a73D2b6870C6292831BD'
+var address = '0xC2ac8203cF725FC2E6c7153247664fBdCf0E3877'
 var abi = [
 	{
 		"constant": true,

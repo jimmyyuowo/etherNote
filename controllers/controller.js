@@ -4,14 +4,14 @@ exports.signup = (req, res) => {
 	//console.log(req.body.username)
 	var username = req.body.username
 	if (web3Util.isExistUsername(username)) {
-		res.json({label: false, msg: '注册失败：用户名已存在'})
+		res.json({label: false, msg: '註冊失败：用户名已存在'})
 		return
 	}
 	web3Util.createUser(req.body.username, (result) => {
 		if (result) {
-			res.json({label: true, msg: '注册成功'})
+			res.json({label: true, msg: '註冊成功'})
 		} else {
-			res.json({label: false, msg: '注册失败'})
+			res.json({label: false, msg: '註冊失败'})
 		}
 	})
 }
@@ -19,19 +19,19 @@ exports.signup = (req, res) => {
 exports.signin = (req, res) => {
 	var username = req.body.username
 	if (!web3Util.isExistUsername(username)) {
-		res.json({label: false, msg: '登陆失败：用户名不存在'})
+		res.json({label: false, msg: '登錄失败：用户名不存在'})
 		return
 	}
-	res.json({label: true, msg: '登录成功'})
+	res.json({label: true, msg: '登錄成功'})
 }
 
 exports.getNote = (req, res) => {
 	var username = req.params.username
 	if (!web3Util.isExistUsername(username)) {
-		res.json({label: false, msg: '获取Note失败：用户名不存在'})
+		res.json({label: false, msg: '獲取Note失败：用户名不存在'})
 		return
 	}
-	res.json({label: true, msg: '获取Note成功', note: web3Util.getNote(username)})
+	res.json({label: true, msg: '獲取Note成功', note: web3Util.getNote(username)})
 }
 
 exports.updateNote = (req, res) => {
@@ -45,7 +45,7 @@ exports.updateNote = (req, res) => {
 		if (result) {
 			res.json({label: true, msg: '修改Note成功'})
 		} else {
-			res.json({label: false, msg: '修改Note失败'})
+			res.json({label: false, msg: '修改Note失敗'})
 		}
 	})
 }
